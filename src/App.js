@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navbar from './components/Navbar/Navbar.jsx';
+import Home from './components/Home/Home.jsx';
+import Schedule from './components/Schedule/Schedule.jsx';
+import Classes from './components/Classes/Classes.jsx';
+import Pricing from './components/Pricing/Pricing.jsx';
+import Testmonials from './components/Testmonials/Testmonials.jsx';
+import Footer from './components/Footer/Footer.jsx';
+import { useEffect } from 'react';
+import Aos from 'aos';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  useEffect(()=>{
+    Aos.init()
+  },[])
+  return <>
+  
+  <Navbar/>
+  <Home/>
+  <Schedule/>
+  <Classes/>
+  <Pricing/>
+  <Testmonials/>
+  <Footer/>
+  </>
 }
 
 export default App;
